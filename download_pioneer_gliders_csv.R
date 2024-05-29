@@ -30,7 +30,7 @@ for (i in 1:length(all_datasets)){
 
 timeout = 60*30
 for (j in 1:length(pioneer_datasets)){
-  dataset_id = pioneer_datasets[j+3]
+  dataset_id = pioneer_datasets[j]
   download_gliderdac_file(dataset_id, save_directory, timeout)
 }
 
