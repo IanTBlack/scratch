@@ -107,8 +107,8 @@ def main():
     # Subset data to derive stats.
     num_times = len(bm.instrument_time.values)
     tp = int(num_times * 0.1)
-    edt = bm.instrument_time.values[-10]
-    bdt = bm.instrument_time.values[-10 - (tp * 5)]
+    edt = bm.instrument_time.values[-tp]
+    bdt = bm.instrument_time.values[-tp - (tp * 5)]
     subbm = bm.sel(instrument_time=slice(bdt, edt))
 
     bm['turbidity_mean'] = subbm.turbidity.mean()
